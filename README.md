@@ -24,8 +24,8 @@ In cylindrical coordinates, the envelope is decomposed in $N_m$ azimuthal modes 
 
 ```math
    \begin{aligned}
-   E_x (r,\theta,t) = \mathrm{Re}\left( \sum_{-N_m+1}^{N_m-1}\mathcal{E}_m(r,t) e^{-im\theta}e^{-i\omega_0t}p_x\right)\\
-   E_y (r,\theta,t) = \mathrm{Re}\left( \sum_{-N_m+1}^{N_m-1}\mathcal{E}_m(r,t) e^{-im\theta}e^{-i\omega_0t}p_y\right).\end{aligned}
+   E_x (r,\theta,t) = \mathrm{Re}\left( \sum_{m=-N_m+1}^{N_m-1}\mathcal{E}_|m|(r,t) e^{-im\theta}e^{-i\omega_0t}p_x\right)\\
+   E_y (r,\theta,t) = \mathrm{Re}\left( \sum_{m=-N_m+1}^{N_m-1}\mathcal{E}_|m|(r,t) e^{-im\theta}e^{-i\omega_0t}p_y\right).\end{aligned}
 ```
 
 ## Workflow
