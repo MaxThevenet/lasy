@@ -1,4 +1,3 @@
-from copy import deepcopy
 import numpy as np
 from scipy.constants import c
 
@@ -8,7 +7,7 @@ from axiprop.lib import PropagatorResampling
 from axiprop.lib import PropagatorResamplingFresnel
 from axiprop.lib import PropagatorFFT2
 from axiprop.lib import PropagatorFFT2Fresnel
-from axiprop.utils import export_to_lasy, import_from_lasy
+from axiprop.utils import import_from_lasy
 from axiprop.containers import ScalarFieldEnvelope
 
 
@@ -185,7 +184,7 @@ class XYTFresnelPropagator(Propagator):
             x_axis=container_in.x,
             y_axis=container_in.y,
             x_axis_new=x_axis_new,
-            y_axis_new=x_axis_new,
+            y_axis_new=y_axis_new,
             kz_axis=container_in.k_freq,
             verbose=verbose
         )
