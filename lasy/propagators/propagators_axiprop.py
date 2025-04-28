@@ -15,7 +15,18 @@ class MRTPropagator(Propagator):
     """
     """
 
-    def propagate(self, distance, laser_in, laser_out=None, verbose=False):
+    def __init__(self, verbose=False):
+        self.verbose = verbose
+        return
+
+    def update(self, laser_in):
+        self.laser_in = laser_in
+        return
+
+    def propagate(self, distance, laser_out=None):
+        laser_in = self.laser_in
+        verbose = self.verbose
+
         containers_in, m_axis = import_from_lasy(laser_in)
 
         if laser_out is None:
@@ -71,7 +82,18 @@ class MRTFresnelPropagator(Propagator):
     """
     """
 
-    def propagate(self, distance, laser_in, laser_out=None, verbose=False):
+    def __init__(self, verbose=False):
+        self.verbose = verbose
+        return
+
+    def update(self, laser_in):
+        self.laser_in = laser_in
+        return
+
+    def propagate(self, distance, laser_out=None):
+        laser_in = self.laser_in
+        verbose = self.verbose
+
         containers_in, m_axis = import_from_lasy(laser_in)
 
         if laser_out is None:
@@ -129,7 +151,18 @@ class XYTPropagator(Propagator):
     """
     """
 
-    def propagate(self, distance, laser_in, laser_out=None, verbose=False):
+    def __init__(self, verbose=False):
+        self.verbose = verbose
+        return
+
+    def update(self, laser_in):
+        self.laser_in = laser_in
+        return
+
+    def propagate(self, distance, laser_out=None):
+        laser_in = self.laser_in
+        verbose = self.verbose
+
         container_in = import_from_lasy(laser_in)
 
         if laser_out is None:
@@ -170,7 +203,18 @@ class XYTFresnelPropagator(Propagator):
     """
     """
 
-    def propagate(self, distance, laser_in, laser_out=None, verbose=False):
+    def __init__(self, verbose=False):
+        self.verbose = verbose
+        return
+
+    def update(self, laser_in):
+        self.laser_in = laser_in
+        return
+
+    def propagate(self, distance, laser_out=None):
+        laser_in = self.laser_in
+        verbose = self.verbose
+
         container_in = import_from_lasy(laser_in)
 
         if laser_out is None:
@@ -210,6 +254,3 @@ class XYTFresnelPropagator(Propagator):
         laser_out.grid.lo[-1] = laser_loc.t.min()
 
         return laser_out
-
-
-
